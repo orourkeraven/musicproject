@@ -1,7 +1,17 @@
 let currentSlide = 0;
+
+//canvas setup
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+canvas.width=500;
+canvas.height=500;
+
+ctx.font="50px Times New Roman";
+ctx.fillStyle="purple";
+ctx.fillText("Presentation Title", 20, 300);
+
+//functions
 function switchSlide(x) {
     switch (x) {
         case 'L':
@@ -16,7 +26,6 @@ function switchSlide(x) {
         default:
             //do nothing
             break;
-
     }
     return true;
 }
