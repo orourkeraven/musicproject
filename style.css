@@ -1,5 +1,5 @@
 body {
-    background-color: lightpink;
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -10,7 +10,11 @@ canvas {
     background-color: white;
 }
 
-h3 {
+* {
     color:gray;
     font-size:30px;
+}
+
+#vid1 {
+    visibility: hidden;
 }
