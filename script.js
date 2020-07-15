@@ -8,7 +8,7 @@ const ctx = canvas.getContext("2d");
 
 //canvas.width=500;
 canvas.width=window.innerWidth;
-canvas.height=500;
+canvas.height = (window.innerHeight) / 2;
 
 ctx.font="50px Times New Roman";
 ctx.fillStyle="purple";
@@ -85,7 +85,7 @@ function setSlide() {
     //apply current slide to canvas
     switch(currentSlide) {
         case 0:
-            ctx.fillText("Presentation Title", 20, 300);
+            ctx.fillText("Presentation Title", canvas.width * 0.2, canvas.height * 0.2);
             break;
         case 1:
             ctx.fillText("First Slide", 20, 300);
