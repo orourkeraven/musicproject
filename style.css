@@ -1,6 +1,5 @@
 html, body {
     background-color: black;
-    display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
@@ -14,10 +13,14 @@ canvas {
 }
 
 * {
-    color:gray;
-    font-size:30px;
+    color: rgba(94, 94, 94, 0.41);
+    font-size:16px;
+    padding: 0;
+    margin: 0;
 }
 
-#vid1 {
+#videos {
     visibility: hidden;
+    align-items: center;
+    justify-content: center;
 }
