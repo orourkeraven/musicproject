@@ -7,8 +7,8 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 //canvas.width=500;
-canvas.width=window.innerWidth;
-canvas.height = (window.innerHeight) * 0.6;
+canvas.width=window.innerWidth - 20;
+canvas.height = (window.innerHeight) * 0.55;
 
 setSlide();
 let text_Y_val = 0;
@@ -65,8 +65,9 @@ function switchSlide(x) {
 function setSlide() {
     //clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //hide video
+    //hide video, buttons
     hideVideo();
+    hideButtons();
     //create text gradient
     //gradient & shadow from https://www.html5canvastutorials.com/tutorials/html5-canvas-gradient-text-tutorial/
     ctx.shadowColor = "rgba(83,149,170,0.69)";
@@ -102,15 +103,16 @@ function setSlide() {
                 "best attempt at creating music, usually based off of \"real music\" input that the computer tries to imitate.");
             break;
         case 2:
+            //neural network diagram
+            drawImageOnSlide("neuralnetdiagram", 100, 100, 0.4);
             text_Y_val = fillSlide("How is it created?",
                 "Artificial neural networks are used to train computers to generate new music.");
-            //neural network diagram
-            drawImageOnSlide("./images/neuralnetdiagram.png", 100, 100, 0.4);
             break;
         case 3:
+            //neural network diagram
+            drawImageOnSlide("neuralnetdiagram", 100, 100, 0.4);
             text_Y_val = fillSlide("How is it created?",
-                "Artificial neural networks are used to train computers to generate new music.");            //neural network diagram
-            drawImageOnSlide("./images/neuralnetdiagram.png", 100, 100, 0.4);
+                "Artificial neural networks are used to train computers to generate new music.");
             //text to right of image
             text_Y_val += 30;
             //bulletpoint
@@ -141,8 +143,14 @@ function setSlide() {
             ctx.fillText("And much more. Every aspect of music can be represented numerically", 575, text_Y_val);
             text_Y_val += 30;
             ctx.fillText("and used to develop the neural network.", 575, text_Y_val);
-
-
+            break;
+        case 4:
+            showButtons();
+            fillSlide("History");
+            ctx.fillText("Take a guess: when was the first computer-generated composition created?", (canvas.width * 0.5) - 300, (canvas.height * 0.5) - 30 );
+            break;
+        case 5:
+            fillSlide("History", "Believe it or not, the first computer composition was created in 1957!");
             break;
         default:
             ctx.fillText("Slide " + String(currentSlide), 20, 300);
@@ -152,7 +160,6 @@ function setSlide() {
 }
 
 //fill generic slide with title and text
-//todo account for multiple line bulletpoints. return yval and have a function just for bulletpoints
 function fillSlide(title, l1="", l2="", l3="", l4="", l5="", l6="") {
     //title
     ctx.font= "36px Georgia";
@@ -207,33 +214,72 @@ function hideVideo() {
     }
 }
 
+//show buttons below canvas
+function showButtons() {
+    document.getElementById("buttons").style.display = "inline";
+}
+//hide buttons below canvas
+function hideButtons(){
+    document.getElementById("buttons").style.display = "none";
+}
+
 //put image on canvas slide. takes address of image, x/y coords for canvas, and percent to multiply size
-function drawImageOnSlide(source, x_val, y_val, size_pct) {
-    let img = new Image();
-    img.src = source;
+function drawImageOnSlide(image_id, x_val, y_val, size_pct) {
+    let img = document.getElementById(image_id);
     let img_width = img.width * size_pct;
     let img_height = img.height * size_pct;
-
-    img.onload = function() {
-        ctx.drawImage(img, x_val, y_val, img_width, img_height);
-    }
+    ctx.drawImage(img, x_val, y_val, img_width, img_height);
 }
+
+//identify source names and links
+let num_sources = 2;
+let sn1 = "\"Spotify + The Machine: Using Machine Learning to Create Value and Competitive Advantage.\" MBA Student Perspectives, Harvard Business School, 13 Nov. 2018"
+let sl1 = "https://digital.hbs.edu/platform-rctom/submission/spotify-the-machine-using-machine-learning-to-create-value-and-competitive-advantage/"
+let sn2 = "Company - Shazam. Shazam, www.shazam.com/company. Accessed 22 July 2020.";
+let sl2 = "https://www.shazam.com/company";
 
 //change text for slide source under canvas
 function setSlideSource(){
     switch(currentSlide){
         case 1:
-            document.getElementById("sourcelink1").firstChild.nodeValue =
-                "\"Spotify + The Machine: Using Machine Learning to Create Value and Competitive Advantage.\" MBA Student Perspectives, Harvard Business School, 13 Nov. 2018";
-            document.getElementById("sourcelink1").setAttribute("href", "https://digital.hbs.edu/platform-rctom/submission/spotify-the-machine-using-machine-learning-to-create-value-and-competitive-advantage/");
-
-            document.getElementById("sourcelink2").firstChild.nodeValue = "Company - Shazam. Shazam, www.shazam.com/company. Accessed 22 July 2020.";
-            document.getElementById("sourcelink2").setAttribute("href", "https://www.shazam.com/company");
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn1;
+            document.getElementById("sourcelink1").setAttribute("href", sl1);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn2;
+            document.getElementById("sourcelink2").setAttribute("href", sl2);
             break;
         default:
             document.getElementById("sourcelink1").firstChild.nodeValue = "";
             document.getElementById("sourcelink2").firstChild.nodeValue = "";
             document.getElementById("sourcelink3").firstChild.nodeValue = "";
+            break;
+    }
+}
+
+//behavior for button clicks: go to next slide, display correct if right answer
+function clickButton(val){
+    switchSlide('R');
+    switch(val){
+        case 1957:
+            ctx.fillStyle = "black";
+            ctx.fillRect(0,0,200,70);
+            ctx.shadowColor = "rgba(83,149,170,0.69)";
+            ctx.shadowOffsetX = 10;
+            ctx.shadowOffsetY = 10
+            ctx.shadowBlur = 10;
+            let gradient = ctx.createLinearGradient(0, 0, canvas.width * 0.7, canvas.height * 0.3);
+            gradient.addColorStop(0, "rgb(0,185,253)");
+            gradient.addColorStop(1, "rgb(15,229,181)");
+            ctx.fillStyle = gradient;
+            ctx.font = "50px Georgia"
+            ctx.fillText("Correct!", 0, 50);
+            break;
+        case 1968:
+            break;
+        case 1991:
+            break;
+        case 2002:
+            break;
+        default:
             break;
     }
 }

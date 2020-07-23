@@ -13,7 +13,7 @@ canvas {
 }
 
 * {
-    color: rgba(94, 94, 94, 0.41);
+    color: rgba(94, 94, 94, 0.69);
     font-size:16px;
     padding: 0;
     margin: 0;
@@ -23,4 +23,35 @@ canvas {
     visibility: hidden;
     align-items: center;
     justify-content: center;
+}
+
+#images {
+    display: none;
+}
+
+#buttons {
+    display:none;
+    align-items: center;
+}
+
+button {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    text-align: center;
+    border: 4px solid #0FE5B5;
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 12px;
+    color:#0FE5B5;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button:hover {
+    border: 4px solid #00B9FD;
+    color:#00B9FD;
+    text-shadow: 2px 2px 5px rgb(142, 169, 179);
+    box-shadow: 2px 2px 5px rgb(142, 169, 179);
+
+
 }
