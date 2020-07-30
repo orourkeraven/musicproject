@@ -92,6 +92,10 @@ function setSlide() {
             ctx.fillText("↓ Sources will be linked under slides ↓", canvas.width * 0.1, canvas.height - 20);
             break;
         case 1:
+            // alert("Important: if your browser is not currently open to full screen, I strongly recommend:\n" +
+            //     "• opening fullscreen\n" +
+            // "• then refreshing the page\n" +
+            // "before continuing. The project may not work correctly otherwise.");
             ctx.font= String(canvas.width * 0.05) + "px Georgia";
             ctx.fillText("AI-Generated Music", canvas.width * 0.1, canvas.height * 0.2);
             ctx.font="20px Georgia";
@@ -99,12 +103,6 @@ function setSlide() {
             ctx.shadowColor = "transparent";
             ctx.fillText("← Use the left and right arrows on your keyboard to navigate slides →", canvas.width * 0.3, canvas.height * 0.5);
             ctx.fillText("↓ Sources will be linked under slides ↓", canvas.width * 0.1, canvas.height - 20);
-            ctx.fillStyle = "#ff00ab";
-            ctx.fillText("Important: if your browser is not currently open to full screen, I strongly recommend:", 20, (canvas.height * 0.5) + 30);
-            ctx.fillText("• opening fullscreen", 20, (canvas.height * 0.5) + 60);
-            ctx.fillText("• then refreshing the page", 20, (canvas.height * 0.5) + 90);
-            ctx.fillText("before continuing. The project may not work correctly otherwise.", 20, (canvas.height * 0.5) + 120);
-            window.confirm("Is your browser open to fullscreen");
             break;
         case 2:
             text_Y_val = fillSlide("AI-Generated Music: What is it?",
@@ -189,8 +187,7 @@ function setSlide() {
         case 8:
             text_Y_val = fillSlide("History",
                 "Believe it or not, the first computer composition was created in 1957! \"Illiac Suite for String Quartet\" was created as a collaboration between",
-                "composer Lejaren Hiller and mathematician Leonard Isaacson. "
-            );
+                "composer Lejaren Hiller and mathematician Leonard Isaacson. ");
             newBulletPoint(text_Y_val);
             //todo add info about markov chain
             text_Y_val = fillSlide(" ", " ", " ",
@@ -359,6 +356,9 @@ function hideVideo() {
 
 //show buttons below canvas
 function showButtons() {
+    // if (currentSlide >= 10){
+    //     document.getElementById("nextbutton").firstChild.nodeValue = "next slide";
+    // }
     document.getElementById("buttons").style.display = "inline";
 }
 //hide buttons below canvas
