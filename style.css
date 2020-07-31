@@ -70,18 +70,15 @@ button:hover {
 @keyframes glowing {
     0% {
         background-color: rgba(0, 0, 0, 0);
-        box-shadow: 0 0 15px rgb(255, 255, 255);
         border: 4px solid #00B9FD;
         color:#00B9FD;
     }
     50% {
-        box-shadow: 0 0 15px rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0);
-        border: 4px solid #4c00ff;
-        color: #4c00ff;
+        border: 4px solid #0037fd;
+        color: #0037fd;
     }
     100% {
-        box-shadow: 0 0 15px rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0);
         border: 4px solid #00B9FD;
         color:#00B9FD;

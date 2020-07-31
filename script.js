@@ -1,5 +1,5 @@
 let currentSlide = 0;
-const lastSlide = 20;
+const lastSlide = 30;
 
 //canvas setup
 const canvas = document.getElementById("canvas");
@@ -11,6 +11,7 @@ canvas.height = (window.innerHeight) * 0.55;
 
 setSlide();
 let text_Y_val = 0;
+let offsetVal = 0;
 
 //key press functionality
 document.addEventListener("keydown", function(event) {
@@ -136,7 +137,7 @@ function setSlide() {
             ctx.fillText("A defining feature of artificial intelligence (versus other types of computing)", 550, text_Y_val);
             text_Y_val += 30;
             ctx.fillText("is that it possesses a ", 550, text_Y_val);
-            let offsetVal = 550 + ctx.measureText("is that it possesses a ").width;
+            offsetVal = 550 + ctx.measureText("is that it possesses a ").width;
             ctx.font = "bold 20px Georgia";
             ctx.fillText("feedback loop ", offsetVal, text_Y_val);
             offsetVal += ctx.measureText("feedback loop ").width;
@@ -152,7 +153,7 @@ function setSlide() {
             text_Y_val += 30;
             //bulletpoint
             ctx.fillText("→", 525, text_Y_val);
-            ctx.fillText("Basically, everything gets represented by a number so that the computer can", 550, text_Y_val);
+            ctx.fillText("Everything gets represented by a number so that the computer can", 550, text_Y_val);
             text_Y_val += 30;
             ctx.fillText("put it through an algorithm. ", 550, text_Y_val);
             //new bulletpoint
@@ -198,20 +199,74 @@ function setSlide() {
                 "Below is the first piece from the suite.");
             break;
         case 9:
+            //todo Ray Kurzweil (with his collection of Tom Swift, Jr. books, which he read as a child) Circa 2003. Credit: Photo by Michael Lutch. Courtesy of Kurzweil Technologies, Inc.
             text_Y_val = fillSlide("History",
-                "Another notable computer composition was featured on the television show \"I\'ve Got a Secret\" in 1965.",);
+                "Another notable computer composition was featured on the television",
+                "show \"I\'ve Got a Secret\" in 1965.",);
             newBulletPoint(text_Y_val);
-            text_Y_val = fillSlide(" ", " ",
-                "Raymond Kurzweil is famous today as an author, inventor, and outspoken futurist and is currently employed as a director of engineering at Google.");
+            text_Y_val = fillSlide(" ", " ", " ",
+                "Raymond Kurzweil is famous today as an author, inventor, and outspoken ",
+                "futurist and is currently employed as a director of engineering at Google.");
             newBulletPoint(text_Y_val);
-            fillSlide(" ", " ", " ",
-                "He is around 17 in the video below, where he performs his piece and the panelists must guess that it is computer-generated.");
+            fillSlide(" ", " ", " ", " ", " ",
+                "He is around 17 in the video below, where he performs his piece and the ",
+                "panelists must guess that it is computer-generated.");
+            drawImageOnSlide("kurzweil", 800, 50, 0.3);
             break;
         case 10:
-            fillSlide("Modern Methods: Computer Composition", "Computer composition");
-            //todo add info just composed and then recorded by humans
+            text_Y_val = fillSlide("Modern Methods: Computer Composition",
+                "Both of the previous examples were composed by computers and then recorded by humans.");
+            newBulletPoint(text_Y_val);
+            fillSlide(" ", " ", "This is still a popular method today, and a search for \"AI Music\" on YouTube or Google will mostly return compositions of this type.");
             break;
         case 11:
+            text_Y_val = fillSlide("Modern Methods: Computer Composition",
+                "Both of the previous examples were composed by computers and then recorded by humans.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", "This is still a popular method today, and a search for \"AI Music\" on YouTube or Google will mostly return compositions of this type.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", " ",
+                "Aiva Technologies, a Luxembourgian company founded in 2016, has created a program that makes this method easily accessible.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", " ", " ",
+                "AIVA (Artificial Intelligence Virtual Artist), the company's AI composer, uses machine learning methodology, including deep learning ",
+                "(using neural networks) and reinforcement learning (using probability) to create compositions.");
+            break;
+        case 12:
+            text_Y_val = fillSlide("Modern Methods: Computer Composition",
+                "Both of the previous examples were composed by computers and then recorded by humans.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", "This is still a popular method today, and a search for \"AI Music\" on YouTube or Google will mostly return compositions of this type.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", " ",
+                "Aiva Technologies, a Luxembourgian company founded in 2016, has created a program that makes this method easily accessible.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", " ", " ",
+                "AIVA (Artificial Intelligence Virtual Artist), the company's AI composer, uses machine learning methodology, including deep learning ",
+                "(using neural networks) and reinforcement learning (using probability) to create compositions.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", " ", " ", " ", " ",
+                "One of AIVA's creators, Pierre Barreau, believes that personalized music has potential as a new frontier. ",
+                "He aims to use AIVA to create pieces, in the style of great composers like Beethoven and Mozart, which are tailored to individuals' tastes.");
+            break;
+        case 13:
+            text_Y_val = fillSlide("Modern Methods: Computer Composition",
+                "Below, the input I used to create a song using AIVA.");
+            drawImageOnSlide("aivainput", 20, text_Y_val + 10, 0.35);
+            ctx.fillText("The program took less than a minute to create a unique rock song.", 45, 310);
+            ctx.fillText("However, without paying for the rights, I am unable to download the MP3 to share.", 45, 340);
+
+
+            drawImageOnSlide("midifile", 800, 20, 0.3);
+            ctx.fillText("Right, a visual", 650, text_Y_val + 30);
+            ctx.fillText("representation", 650, text_Y_val + 60);
+            ctx.fillText("of the MIDI", 650, text_Y_val + 90);
+            ctx.fillText("file of the song", 650, text_Y_val + 120);
+            ctx.fillText("created by AIVA.", 648, text_Y_val + 150);
+            ctx.fillText("→", 760, text_Y_val + 180);
+            break;
+            //TODO renumber below slides
+        case 14:
             text_Y_val = fillSlide("Modern Methods: Lyric Generation", "AI can also write lyrics!");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", "Many lyric generators exist on the internet. Here's an example of");
@@ -227,31 +282,89 @@ function setSlide() {
             drawImageOnSlide("lyrics2", 700, 20, 0.4);
             drawImageOnSlide("lyrics3", 1050, 20, 0.4);
             break;
-        case 12:
-            fillSlide("Modern Methods: Audio Synthesis", "Audio synthesis");
+        case 15:
+            text_Y_val = fillSlide("Modern Methods: Audio Synthesis", "" +
+                "The electronic synthesis of instrument sounds has been around for decades now. ",
+                "When combined with AI, the results can be really amazing.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", " ",
+                "OpenAI is a San Francisco artificial intelligence research center, founded in 2015 ",
+                "with the mission to \"develop \'digital intelligence\'that will benefit humanity.\"");
+            newBulletPoint(text_Y_val);
+            fillSlide(" ", " ", " ", " ", " ",
+                "In April 2020, OpenAI unveiled \"Jukebox\", a neural network that generates music (vocals included).");
             break;
-        case 13:
+        case 16:
+            text_Y_val = fillSlide("Modern Methods: Audio Synthesis", "In the below example, OpenAI's Jukebox attempted to extend an existing song.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ",
+                "OpenAI says of this method, ");
+            offsetVal = 95 + ctx.measureText("OpenAI says of this method,  ").width;
+            ctx.font = "bold 20px Georgia";
+            ctx.fillText("\"We provide 12 seconds of audio to condition on and Jukebox completes the rest in a specified style.\"", offsetVal, text_Y_val);
+            offsetVal += ctx.measureText("\"We provide 12 seconds of audio to condition on and Jukebox completes the rest in a specified style.\"").width;
+            ctx.font = "20px Georgia";
+            ctx.fillText("(cite)", offsetVal, text_Y_val);
+            newBulletPoint(text_Y_val);
+            fillSlide(" ", " ", " ",
+                "The AI has access to the full lyrics, as well as the genre and artist, as it attempts to continue the song.",
+                " ", " ", "The AI synthesis begins at 0:12.");
+            break;
+        case 17:
             fillSlide("Is it good?", "What do people think?");
             drawImageOnSlide("good2", 100, 100, 0.35);
             drawImageOnSlide("good1", 790, 100, 0.39);
-            //todo add sources for screenshots on slide & under slide
             ctx.fillText("→ Reviews are mixed, with some implementations being better than others.", 75, 300);
-            //todo can people tell the difference, lyrics people thought bettter, lead into lawsuits
             break;
-        case 14:
+        case 18:
+            text_Y_val = fillSlide("Is it good?", "In 1997, UCSC professor David Cope created software that created new music in the style of Bach.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ",
+                "The piece was performed for an audience alongside a genuine Bach composition, as well as a human-created piece imitating Bach's style.");
+            newBulletPoint(text_Y_val);
+            text_Y_val = fillSlide(" ", " ", " ",
+                "The audience believed that the computer-created composition was genuine Bach.");
+            newBulletPoint(text_Y_val);
+            fillSlide(" ", " ", " ", " ",
+                "The event generated controversy as some people found it disrespectful to people like Bach who spent their lives composing music,",
+                "and it raised questions about what should be considered to be \'art\'.");
+            fillSlide(" ", " ", " ", " ", " ", " ", " ",
+                "The composition, performed by humans, is below.");
+            break;
+        case 19:
+            text_Y_val = fillSlide("Is it good?",
+                "A 2019 study commissioned by Amper Music found that panelists were unable to discern between human- and computer-composed music, ",
+                "and also showed no strong preference for one or the other.");
+            break;
+        case 20:
+            text_Y_val = fillSlide("Is it good?",
+                "A 2019 study commissioned by AI company Amper Music found that panelists were unable to discern between human- and computer-composed music, ",
+                "and also showed no strong preference for one or the other.");
+            newBulletPoint(text_Y_val);
+            fillSlide(" ", " ", " ",
+                "A 2020 survey found that ");
+            break;
+        case 19:
+            //todo lead into lawsuits
+
             fillSlide("Is it good?", "Hot tub time");
             break;
-        case 15:
-            fillSlide("So good, it might be illegal", "");
+        case 20:
+            fillSlide("So good, it might be illegal", "jay-z lawsuit, right to likeness");
             //todo fill with jay z lawsuit
             break;
-        case 16:
+        case 21:
+            fillSlide("Further Questions", "who owns copyright?");
+            break;
+        case 22:
+            fillSlide("Further Questions", "impact on musicians, songwriters, is it right? i robot pic, taryn southern cheating");
+            break;
+        case 23:
+            fillSlide("Future", "could it create a popular song, trend or longetivity? ");
+            break;
             //todo impact on songwriters and musicians
-            //todo future: trend or longetivity? could it creat a popular song?
-            break;
-        case 17:
-            //todo add all sources
-            break;
+        //todo future: trend or longetivity? could it creat a popular song?
+        //todo add all sources
         default:
             ctx.fillText("Slide " + String(currentSlide), 20, 300);
             break;
@@ -260,7 +373,7 @@ function setSlide() {
 }
 
 //fill generic slide with title and text
-function fillSlide(title, l1="", l2="", l3="", l4="", l5="", l6="") {
+function fillSlide(title, l1="", l2="", l3="", l4="", l5="", l6="", l7="") {
     //title
     ctx.font= "36px Georgia";
     ctx.fillText(title, 30, 50);
@@ -293,7 +406,10 @@ function fillSlide(title, l1="", l2="", l3="", l4="", l5="", l6="") {
         text_Y_val += 30;
         ctx.fillText(l6, 100, text_Y_val);
     } else return text_Y_val;
-
+    if (l7 !== ""){
+        text_Y_val += 30;
+        ctx.fillText(l7, 100, text_Y_val);
+    } else return text_Y_val;
 }
 
 function newBulletPoint(text_Y_val){
@@ -314,15 +430,19 @@ function showVideo() {
             //kurzweil
             video_source = "https://www.youtube.com/embed/X4Neivqp2K4?start=16";
             break;
-        case 12:
+        case 16:
             //uptown funk extended
             video_source = "https://www.youtube.com/embed/KCaya74_NHw";
             break;
-        case 14:
+        case 18:
+            //undiscovered bach
+            video_source = "https://www.youtube.com/embed/PczDLl92vlc";
+            break;
+        case 19:
             //hot tub time
             video_source = "https://www.youtube.com/embed/OQy1BciDxEc";
             break;
-        case 15:
+        case 20:
             //jay-z
             video_source = "https://www.youtube.com/embed/iyemXtkB-xk";
             break;
@@ -331,11 +451,12 @@ function showVideo() {
             break;
     }
     //change source of video element
+    document.getElementById("video").src = video_source;
+    //show video if there is one
     if (video_source === "none"){
         return;
     } else {
         showNextButton();
-        document.getElementById("video").src = video_source;
         document.getElementById("video").style.visibility="visible";
     }
 }
@@ -356,9 +477,6 @@ function hideVideo() {
 
 //show buttons below canvas
 function showButtons() {
-    // if (currentSlide >= 10){
-    //     document.getElementById("nextbutton").firstChild.nodeValue = "next slide";
-    // }
     document.getElementById("buttons").style.display = "inline";
 }
 //hide buttons below canvas
@@ -390,6 +508,7 @@ let sl6 = "";
 
 //sources to add
 //these lyrics do not exist
+//undiscovered bach https://www.youtube.com/embed/PczDLl92vlc
 
 //change text for slide source under canvas
 function setSlideSource(){
