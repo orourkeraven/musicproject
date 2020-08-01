@@ -185,7 +185,6 @@ function setSlide() {
                 "Believe it or not, the first computer composition was created in 1957! \"Illiac Suite for String Quartet\" was created as a collaboration between",
                 "composer Lejaren Hiller and mathematician Leonard Isaacson. (5)");
             newBulletPoint(text_Y_val);
-            //todo add info about markov chain
             text_Y_val = fillSlide(" ", " ", " ",
                 "This piece was generated using a Markov Chain, a method that uses probability to determine which notes are likely to follow each other. (6)");
             newBulletPoint(text_Y_val);
@@ -282,10 +281,10 @@ function setSlide() {
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ",
                 "OpenAI is a San Francisco artificial intelligence research center, founded in 2015 ",
-                "with the mission to \"develop \'digital intelligence\'that will benefit humanity.\"");
+                "with the mission to \"develop \'digital intelligence\'that will benefit humanity.\" (13) ");
             newBulletPoint(text_Y_val);
             fillSlide(" ", " ", " ", " ", " ",
-                "In April 2020, OpenAI unveiled \"Jukebox\", a neural network that generates music (vocals included).");
+                "In April 2020, OpenAI unveiled \"Jukebox\", a neural network that generates music (vocals included). (14)");
             break;
         case 15:
             text_Y_val = fillSlide("Modern Methods: Audio Synthesis", "In the below example, OpenAI's Jukebox attempted to extend an existing song.");
@@ -297,7 +296,7 @@ function setSlide() {
             ctx.fillText("\"We provide 12 seconds of audio to condition on and Jukebox completes the rest in a specified style.\"", offsetVal, text_Y_val);
             offsetVal += ctx.measureText("\"We provide 12 seconds of audio to condition on and Jukebox completes the rest in a specified style.\"").width;
             ctx.font = "20px Georgia";
-            ctx.fillText("()", offsetVal, text_Y_val);
+            ctx.fillText("(15)", offsetVal, text_Y_val);
             newBulletPoint(text_Y_val);
             fillSlide(" ", " ", " ",
                 "The AI has access to the full lyrics, as well as the genre and artist, as it attempts to continue the song.",
@@ -307,10 +306,15 @@ function setSlide() {
             fillSlide("Is it good?", "What do people think?");
             drawImageOnSlide("good2", 100, 100, 0.35);
             drawImageOnSlide("good1", 790, 100, 0.39);
-            ctx.fillText("→ Reviews are mixed, with some implementations being better than others.", 75, 300);
+            ctx.fillText("→ Reviews are mixed, with some implementations being better than others.", 75, 330);
+            ctx.font = "20px Georgia";
+            ctx.fillStyle = "#535353";
+            ctx.fillText("Vice (16)", 100, 280);
+            ctx.fillText("Medium (17)", 800, 280);
+
             break;
         case 17:
-            text_Y_val = fillSlide("Is it good?", "In 1997, UCSC professor David Cope created software that created new music in the style of Bach.");
+            text_Y_val = fillSlide("Is it good?", "In 1997, UCSC professor David Cope created software that created new music in the style of Bach. (18)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
                 "The piece was performed for an audience alongside a genuine Bach composition, as well as a human-created piece imitating Bach's style.");
@@ -320,25 +324,25 @@ function setSlide() {
             newBulletPoint(text_Y_val);
             fillSlide(" ", " ", " ", " ",
                 "The event generated controversy as some people found it disrespectful to people like Bach who spent their lives composing music,",
-                "and it raised questions about what should be considered to be \'art\'.");
+                "and it raised questions about what should be considered to be \'art\'. (19)");
             fillSlide(" ", " ", " ", " ", " ", " ", " ",
                 "The composition, performed by humans, is below.");
             break;
         case 18:
             text_Y_val = fillSlide("Is it good?",
                 "A 2019 study commissioned by AI company Amper Music found that panelists were unable to discern between human- and computer-composed music, ",
-                "and also showed no strong preference for one or the other.");
+                "and also showed no strong preference for one or the other. (20)");
             break;
         case 19:
             text_Y_val = fillSlide("Is it good?",
                 "A 2019 study commissioned by AI company Amper Music found that panelists were unable to discern between human- and computer-composed music, ",
-                "and also showed no strong preference for one or the other.");
+                "and also showed no strong preference for one or the other. (20)");
             newBulletPoint(text_Y_val);
             fillSlide(" ", " ", " ",
                 "For a 2020 survey by ticket vendor TickPick, participants were shown AI-generated lyrics for rock, rap, country, and pop songs.",
                 "In many cases, a majority of participants attributed the lyrics to popular human artists. Some of the lyrics were so good that 65% of participants",
                 "rated them as the most creative lyrics, and 39.6% rated them the most emotional, compared to 3 human-written lyrics that they",
-                "were shown alongside.");
+                "were shown alongside. (21)");
             break;
         case 20:
             text_Y_val = fillSlide("Is it good?",
@@ -346,7 +350,7 @@ function setSlide() {
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
                 "Below, an OpenAI imitation of Frank Sinatra. The lyrics are funny and absurd; OpenAI says they were \"co-written\"",
-                "by AI and humans. However, the vocal synthesis is very realistic.");
+                "by AI and humans. (15) However, the vocal synthesis is very realistic.");
             break;
         case 21:
             text_Y_val = fillSlide("So good, it might be illegal",
@@ -356,7 +360,7 @@ function setSlide() {
                 "Below, a \"deepfake\" (deep learning + fake) of Jay-Z rapping the lyrics to Billy Joel's \"We Didn't Start the Fire\".");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ",
-                "This audio was created using Google's open source program \"Tacotron 2\".");
+                "This audio was created using Google's open source program \"Tacotron 2\". (23)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ",
                 "The AI does an excellent job of imitating not just Jay-Z's voice, but also his cadence.");
@@ -364,7 +368,7 @@ function setSlide() {
             text_Y_val = fillSlide(" ", " ", " ", " ", " ",
                 "Jay-Z's record label filed a copyright claim against the video on the grounds that \"this content unlawfully uses an AI to",
                 "impersonate our client’s voice\". However, YouTube determined that the copyright claim was incomplete, and the video remains",
-                "up for now. ");
+                "up for now. (23)");
             break;
         case 22:
             text_Y_val = fillSlide("So good, it might be illegal",
@@ -382,38 +386,38 @@ function setSlide() {
         case 23:
             text_Y_val = fillSlide("So good, it might be illegal",
                 "The anonymous creator of the Jay-Z audio has stated, \"I don’t really understand why mimicking a celebrity’s voice using",
-                "an AI model should be treated differently than someone naturally doing an (extremely accurate) impression of that celebrity’s voice.\"");
+                "an AI model should be treated differently than someone naturally doing an (extremely accurate) impression of that celebrity’s voice.\" (25)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ",
             "Technologist and anti-censorship activist Andy Baio says that the case is in uncharted waters, but that the clear labeling",
-                "of the audio as synthesized and the lack of intent to deceive may protect the creator.");
+                "of the audio as synthesized and the lack of intent to deceive may protect the creator. (25)");
             break;
         case 24:
             text_Y_val = fillSlide("Further Questions", "Who owns the copyright to works created by AI?");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
-                "The question of whether a computer can legally be considered an author was raised in 1965 by the US Copyright Office.");
+                "The question of whether a computer can legally be considered an author was raised in 1965 by the US Copyright Office. (26)");
             break;
         case 25:
             text_Y_val = fillSlide("Further Questions", "Who owns the copyright to works created by AI?");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
-                "The question of whether a computer can legally be considered an author was raised in 1965 by the US Copyright Office.");
+                "The question of whether a computer can legally be considered an author was raised in 1965 by the US Copyright Office. (26)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ",
                 "The Compendium of US Copyright Office Practices and the US Court of Appeals for the Ninth Circuit have determined that",
                 "animals, plants, supernatural beings, and \"works produced by a machine or mere mechanical process that operates randomly ",
-                "or automatically\" cannot legally be considered authors. Does this apply to AI, which is capable of adapting and improving?");
+                "or automatically\" cannot legally be considered authors. (26) Does this apply to AI, which is capable of adapting and improving?");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ", " ", " ",
                 "Aiva Technologies seems confident that works created with their AIVA program belong to the company, although",
-                "they offer the option for users to purchase full rights to their creations.");
+                "they offer the option for users to purchase full rights to their creations. (27)");
             break;
         case 26:
             text_Y_val = fillSlide("Further Questions", "How will it affect musicians and composers?");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
-                "Former presidential candidate Andrew Yang warns that millions of American workers will be replaced by machines.",
+                "Former presidential candidate Andrew Yang warns that millions of American workers will be replaced by machines. (28)",
                 "Will AI replace artists?");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ",
@@ -425,14 +429,14 @@ function setSlide() {
                 "Musician Grimes thinks that AI will take over music, however. In 2019, she said:",
                 "\"I feel like we’re in the end of art, human art. Once there’s actual AGI (Artificial General Intelligence), it’s gonna be so ",
                 "much better at making art than us… Once AI can totally master science and art, which could happen in the next 10 years, probably more ",
-                "like 20 or 30 years.\"",);
+                "like 20 or 30 years.\" (30)",);
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ", " ",
-                "*In 2018, musician Taryn Southern released an album on which she collaborated with AIVA, Amper Music, and other AI tools from",
+                "In 2018, musician Taryn Southern released an album on which she collaborated with AIVA, Amper Music, and other AI tools from",
                 "Google and IBM. She said this about the validity of composers using AI:",
                 "\"Yes, we are totally cheating. If music is concretely defined as this one process that everyone must adhere to in order to ");
 
-            ctx.fillText("get to some sort of end goal, then, yes, I'm cheating. I am leading the way for all the cheaters!\"", 100, text_Y_val + 30);
+            ctx.fillText("get to some sort of end goal, then, yes, I'm cheating. I am leading the way for all the cheaters!\" (31)", 100, text_Y_val + 30);
             break;
         case 28:
             text_Y_val = fillSlide("Future",
@@ -448,7 +452,7 @@ function setSlide() {
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
                 "Other technological innovations such as the synthesizer and auto-tune were dismissed as gimmicks, but they remain",
-                "popular tools for artists.");
+                "popular tools for artists. (32)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ",
                 "I predict that AI will be another tool that musicians use for inspiration and enhancement.");
@@ -643,10 +647,14 @@ let sn28 = "(28) Yang, A., 2019. Opinion | Andrew Yang: Yes, Robots Are Stealing
 let sl28 = "https://www.nytimes.com/2019/11/14/opinion/andrew-yang-jobs.html";
 let sn29 = "(29) AIVA Helpdesk. 2020. I Am A Composer, Is AIVA Going To Replace My Profession?.";
 let sl29 = "https://aiva.crisp.help/en/article/i-am-a-composer-is-aiva-going-to-replace-my-profession-1wt6xag/";
-let sn30 = "(30) ";
-let sl30 = "";
-let sn31 = "(31) ";
-let sl31 = "";
+let sn30 = "(30) Fu, Eddie, 2019. Grimes Believes Artificial Intelligence Will Make Live Music “Obsolete”.";
+let sl30 = "https://genius.com/a/grimes-believes-artificial-intelligence-will-make-live-music-obsolete";
+let sn31 = "(31) Musically.com. 2018. Taryn Southern On AI Music: ‘Yes, We Are Totally Cheating!’ - Music Ally.";
+let sl31 = "https://musically.com/2018/09/03/taryn-southern-ai-music/";
+let sn32 = "(32) Reid, Shaheem (2009-06-06). \"Jay-Z Premiers New Song, 'D.O.A.': 'Death Of Auto-Tune'\". MTV. Archived from the original on 27 June 2009.";
+let sl32 = "http://www.mtv.com/news/1613390/jay-z-premieres-new-song-doa-death-of-auto-tune/";
+
+
 
 //sources to add
 //these lyrics do not exist
@@ -759,6 +767,17 @@ function setSlideSource(){
             document.getElementById("sourcelink1").setAttribute("href", sl28);
             document.getElementById("sourcelink2").firstChild.nodeValue = sn29;
             document.getElementById("sourcelink2").setAttribute("href", sl29);
+            break;
+        case 27:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn30;
+            document.getElementById("sourcelink1").setAttribute("href", sl30);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn31;
+            document.getElementById("sourcelink2").setAttribute("href", sl31);
+            break;
+        case 28:
+        case 29:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn32;
+            document.getElementById("sourcelink1").setAttribute("href", sl32);
             break;
         default:
             document.getElementById("sourcelink1").firstChild.nodeValue = "";
