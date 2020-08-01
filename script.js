@@ -373,11 +373,11 @@ function setSlide() {
             text_Y_val = fillSlide(" ", " ",
                 "\"Amanda Levendowski, a professor at Georgetown Law and founding director of its Intellectual Property and Information Policy Clinic, ",
                 "says that while, at first look, the Jay-Z situation may look like a copyright issue regarding the data used to create the voice, it’s actually ",
-                "closer in spirit to prior legal cases of human impersonators.\"(*cite Medium article)");
+                "closer in spirit to prior legal cases of human impersonators.\"(17)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ", " ",
                 "A 1988 case ruled that vocal imitation in commercial materials is not protected if it does nothing but exploit the person's identity, and",
-                "a 1991 case established legal precedent for rights to a person's likeness. ");
+                "a 1991 case established legal precedent for rights to a person's likeness. (17)");
             break;
         case 23:
             text_Y_val = fillSlide("So good, it might be illegal",
@@ -621,10 +621,32 @@ let sn17 = "(17) Gershgorn, D. (2020, May 04). Deepfake Music Is So Good It Migh
 let sl17 = "https://onezero.medium.com/deepfake-music-is-so-good-it-might-be-illegal-c11f9618d1f9";
 let sn18 = "(18) Johnson, George. \"Undiscovered Bach? No, A Computer Wrote It.\" The New York Times, November 11 1997.";
 let sl18 = "https://www.nytimes.com/1997/11/11/science/undiscovered-bach-no-a-computer-wrote-it.html?mtrref=www.google.com&gwh=9AFD6DB51EBAE5B8BFE75E167CC9E502&gwt=pay";
-let sn19 = "(19) derecke2013. \"Undiscovered Bach? No, a Computer Wrote It.\" THe Thousand-Year Ears. October 02, 2013.";
+let sn19 = "(19) derecke2013. \"Undiscovered Bach? No, a Computer Wrote It.\" The Thousand-Year Ears. October 02, 2013.";
 let sl19 = "https://thousandyearears.wordpress.com/2013/10/01/undiscovered-bach-no-a-computer-wrote-it/";
 let sn20 = "(20)  Musically.com. 2019. Can Humans Tell The Difference Between AI Music And Music Made By People?.";
 let sl20 = "https://musically.com/2019/05/30/can-humans-tell-the-difference-between-ai-music-and-music-made-by-people/";
+let sn21 = "(21) TickPick. 2020. Tickpick | Ai Drops An Album.";
+let sl21 = "https://www.tickpick.com/ai-drops-an-album";
+let sn22 = "(22)  \"Frank Sinatra - Hot Tub Time (Unofficial Video)\". YouTube, uploaded by Nam3y123, 15 May 2020.";
+let sl22 = "https://www.youtube.com/watch?v=OQy1BciDxEc&feature=emb_title";
+let sn23 = "(23) Statt, N., 2020. Jay Z Tries To Use Copyright Strikes To Remove Deepfaked Audio Of Himself From Youtube. [online] The Verge.";
+let sl23 = "https://www.theverge.com/2020/4/28/21240488/jay-z-deepfakes-roc-nation-youtube-removed-ai-copyright-impersonation";
+let sn24 = "(24) \"Jay-Z covers \"We Didn't Start the Fire\" by Billy Joel (Speech Synthesis)\". YouTube, uploaded by Vocal Synthesis, 25 April 2020.";
+let sl24 = "https://www.youtube.com/watch?v=iyemXtkB-xk&feature=emb_title";
+let sn25 = "(25) Baio, Andy, 2020. With Questionable Copyright Claim, Jay-Z Orders Deepfake Audio Parodies Off Youtube – Waxy.Org.";
+let sl25 = "https://waxy.org/2020/04/jay-z-orders-deepfake-audio-parodies-off-youtube/";
+let sn26 = "(26) Deahl, D., 2020. We’Ve Been Warned About AI And Music For Over 50 Years, But No One’S Prepared. [online] The Verge.";
+let sl26 = "https://www.theverge.com/2019/4/17/18299563/ai-algorithm-music-law-copyright-human";
+let sn27 = "(27) AIVA Helpdesk. 2020. Who Owns The Copyright Of The Music Created With AIVA?";
+let sl27 = "https://aiva.crisp.help/en/article/who-owns-the-copyright-of-the-music-created-with-aiva-139mpug/";
+let sn28 = "(28) Yang, A., 2019. Opinion | Andrew Yang: Yes, Robots Are Stealing Your Job. [online] Nytimes.com.";
+let sl28 = "https://www.nytimes.com/2019/11/14/opinion/andrew-yang-jobs.html";
+let sn29 = "(29) AIVA Helpdesk. 2020. I Am A Composer, Is AIVA Going To Replace My Profession?.";
+let sl29 = "https://aiva.crisp.help/en/article/i-am-a-composer-is-aiva-going-to-replace-my-profession-1wt6xag/";
+let sn30 = "(30) ";
+let sl30 = "";
+let sn31 = "(31) ";
+let sl31 = "";
 
 //sources to add
 //these lyrics do not exist
@@ -697,6 +719,46 @@ function setSlideSource(){
             document.getElementById("sourcelink1").setAttribute("href", sl18);
             document.getElementById("sourcelink2").firstChild.nodeValue = sn19;
             document.getElementById("sourcelink2").setAttribute("href", sl19);
+            break;
+        case 18:
+        case 19:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn20;
+            document.getElementById("sourcelink1").setAttribute("href", sl20);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn21;
+            document.getElementById("sourcelink2").setAttribute("href", sl21);
+            break;
+        case 20:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn22;
+            document.getElementById("sourcelink1").setAttribute("href", sl22);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn15;
+            document.getElementById("sourcelink2").setAttribute("href", sl15);
+            break;
+        case 21:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn23;
+            document.getElementById("sourcelink1").setAttribute("href", sl23);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn24;
+            document.getElementById("sourcelink2").setAttribute("href", sl24);
+            break;
+        case 22:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn17;
+            document.getElementById("sourcelink1").setAttribute("href", sl17);
+            break;
+        case 23:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn25;
+            document.getElementById("sourcelink1").setAttribute("href", sl25);
+            break;
+        case 24:
+        case 25:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn26;
+            document.getElementById("sourcelink1").setAttribute("href", sl26);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn27;
+            document.getElementById("sourcelink2").setAttribute("href", sl27);
+            break;
+        case 26:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn28;
+            document.getElementById("sourcelink1").setAttribute("href", sl28);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn29;
+            document.getElementById("sourcelink2").setAttribute("href", sl29);
             break;
         default:
             document.getElementById("sourcelink1").firstChild.nodeValue = "";
