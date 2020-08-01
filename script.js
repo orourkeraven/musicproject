@@ -367,7 +367,7 @@ function setSlide() {
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ", " ",
                 "Jay-Z's record label filed a copyright claim against the video on the grounds that \"this content unlawfully uses an AI to",
-                "impersonate our client’s voice\". However, YouTube determined that the copyright claim was incomplete, and the video remains",
+                "impersonate our client’s voice.\" However, YouTube determined that the copyright claim was incomplete, and the video remains",
                 "up for now. (23)");
             break;
         case 22:
@@ -375,7 +375,7 @@ function setSlide() {
                 "Does Jay-Z have grounds for a copyright claim?");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
-                "\"Amanda Levendowski, a professor at Georgetown Law and founding director of its Intellectual Property and Information Policy Clinic, ",
+                "According to a Medium article, \"Amanda Levendowski, a professor at Georgetown Law and founding director of its Intellectual Property and Information Policy Clinic, ",
                 "says that while, at first look, the Jay-Z situation may look like a copyright issue regarding the data used to create the voice, it’s actually ",
                 "closer in spirit to prior legal cases of human impersonators.\"(17)");
             newBulletPoint(text_Y_val);
@@ -444,7 +444,7 @@ function setSlide() {
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ",
                 "Other technological innovations such as the synthesizer and auto-tune were dismissed as gimmicks, but they remain",
-                "popular tools for artists.");
+                "popular tools for artists. (32)");
             break;
         case 29:
             text_Y_val = fillSlide("Future",
@@ -653,6 +653,10 @@ let sn31 = "(31) Musically.com. 2018. Taryn Southern On AI Music: ‘Yes, We Are
 let sl31 = "https://musically.com/2018/09/03/taryn-southern-ai-music/";
 let sn32 = "(32) Reid, Shaheem (2009-06-06). \"Jay-Z Premiers New Song, 'D.O.A.': 'Death Of Auto-Tune'\". MTV. Archived from the original on 27 June 2009.";
 let sl32 = "http://www.mtv.com/news/1613390/jay-z-premieres-new-song-doa-death-of-auto-tune/";
+let usn = "\"Uptown Funk, but an AI attempts to continuously generate more of the song\". YouTube, uploaded by WigWoo1, 5 May 2020.";
+let usl = "https://www.youtube.com/watch?v=KCaya74_NHw&feature=emb_title";
+let bsn = "\"Bach style chorale Emmy David Cope\". YouTube, uploaded by DavidHCope, 11 December 2012.";
+let bsl = "https://www.youtube.com/watch?v=PczDLl92vlc&feature=emb_title";
 
 
 
@@ -715,6 +719,8 @@ function setSlideSource(){
         case 15:
             document.getElementById("sourcelink1").firstChild.nodeValue = sn15;
             document.getElementById("sourcelink1").setAttribute("href", sl15);
+            document.getElementById("sourcelink2").firstChild.nodeValue = usn;
+            document.getElementById("sourcelink2").setAttribute("href", usl);
             break;
         case 16:
             document.getElementById("sourcelink1").firstChild.nodeValue = sn16;
@@ -727,6 +733,9 @@ function setSlideSource(){
             document.getElementById("sourcelink1").setAttribute("href", sl18);
             document.getElementById("sourcelink2").firstChild.nodeValue = sn19;
             document.getElementById("sourcelink2").setAttribute("href", sl19);
+            document.getElementById("sourcelink3").firstChild.nodeValue = bsn;
+            document.getElementById("sourcelink3").setAttribute("href", bsl);
+
             break;
         case 18:
         case 19:
