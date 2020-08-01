@@ -655,6 +655,7 @@ function setSlideSource(){
             document.getElementById("sourcelink1").setAttribute("href", sl10);
             document.getElementById("sourcelink2").firstChild.nodeValue = sn11;
             document.getElementById("sourcelink2").setAttribute("href", sl11);
+            break;
         case 13:
             document.getElementById("sourcelink1").firstChild.nodeValue = sn12;
             document.getElementById("sourcelink1").setAttribute("href", sl12);
