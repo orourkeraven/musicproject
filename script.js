@@ -277,7 +277,7 @@ function setSlide() {
             break;
         case 14:
             text_Y_val = fillSlide("Modern Methods: Audio Synthesis", "" +
-                "The electronic synthesis of instrument sounds has been around for decades now. ",
+                "The electronic synthesis of instrument sounds has been around for decades. ",
                 "When combined with AI, the results can be really amazing.");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ",
@@ -607,8 +607,24 @@ let sn10 = "(10) Machuron, C. (2019, April 08). AIVA: The Artificial Intelligenc
 let sl10 = "https://www.siliconluxembourg.lu/aiva-the-artificial-intelligence-composing-classical-music/";
 let sn11 = "(11) About AIVA. Aiva Technologies. Retrieved July 30, 2020.";
 let sl11 = "https://www.aiva.ai/about";
-let sn12 = "Artificial Intelligence Songwriter – These Lyrics Do Not Exist. Retrieved July 30, 2020.";
+let sn12 = "(12) Artificial Intelligence Songwriter – These Lyrics Do Not Exist. Retrieved July 30, 2020.";
 let sl12 = "https://theselyricsdonotexist.com";
+let sn13 = "(13) Markoff, J. (2015, December 11). Artificial-Intelligence Research Center Is Founded by Silicon Valley Investors.";
+let sl13 = "https://www.nytimes.com/2015/12/12/science/artificial-intelligence-research-center-is-founded-by-silicon-valley-investors.html";
+let sn14 = "(14) Stephen, Bijan. (2020, April 30). OpenAI introduces Jukebox, a new AI model that generates genre-specific music. Retrieved July 30, 2020.";
+let sl14 = "https://www.theverge.com/2020/4/30/21243038/openai-jukebox-model-raw-audio-lyrics-ai-generated-copyright";
+let sn15 = "(15) OpenAI. (2020, June 15). Jukebox. Retrieved July 30, 2020.";
+let sl15 = "https://openai.com/blog/jukebox/";
+let sn16 = "(16) Rogers, Kaligh. (2018, December 20). Why Is AI-Generated Music Still so Bad? Retrieved July 30, 2020.";
+let sl16 = "https://www.vice.com/en_us/article/qvq54v/why-is-ai-generated-music-still-so-bad";
+let sn17 = "(17) Gershgorn, D. (2020, May 04). Deepfake Music Is So Good It Might Be Illegal. Retrieved July 30, 2020.";
+let sl17 = "https://onezero.medium.com/deepfake-music-is-so-good-it-might-be-illegal-c11f9618d1f9";
+let sn18 = "(18) Johnson, George. \"Undiscovered Bach? No, A Computer Wrote It.\" The New York Times, November 11 1997.";
+let sl18 = "https://www.nytimes.com/1997/11/11/science/undiscovered-bach-no-a-computer-wrote-it.html?mtrref=www.google.com&gwh=9AFD6DB51EBAE5B8BFE75E167CC9E502&gwt=pay";
+let sn19 = "(19) derecke2013. \"Undiscovered Bach? No, a Computer Wrote It.\" THe Thousand-Year Ears. October 02, 2013.";
+let sl19 = "https://thousandyearears.wordpress.com/2013/10/01/undiscovered-bach-no-a-computer-wrote-it/";
+let sn20 = "(20)  Musically.com. 2019. Can Humans Tell The Difference Between AI Music And Music Made By People?.";
+let sl20 = "https://musically.com/2019/05/30/can-humans-tell-the-difference-between-ai-music-and-music-made-by-people/";
 
 //sources to add
 //these lyrics do not exist
@@ -659,6 +675,28 @@ function setSlideSource(){
         case 13:
             document.getElementById("sourcelink1").firstChild.nodeValue = sn12;
             document.getElementById("sourcelink1").setAttribute("href", sl12);
+            break;
+        case 14:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn13;
+            document.getElementById("sourcelink1").setAttribute("href", sl13);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn14;
+            document.getElementById("sourcelink2").setAttribute("href", sl14);
+            break;
+        case 15:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn15;
+            document.getElementById("sourcelink1").setAttribute("href", sl15);
+            break;
+        case 16:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn16;
+            document.getElementById("sourcelink1").setAttribute("href", sl16);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn17;
+            document.getElementById("sourcelink2").setAttribute("href", sl17);
+            break;
+        case 17:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn18;
+            document.getElementById("sourcelink1").setAttribute("href", sl18);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn19;
+            document.getElementById("sourcelink2").setAttribute("href", sl19);
             break;
         default:
             document.getElementById("sourcelink1").firstChild.nodeValue = "";
