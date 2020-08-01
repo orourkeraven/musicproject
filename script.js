@@ -220,11 +220,11 @@ function setSlide() {
             text_Y_val = fillSlide(" ", " ", "This is still a popular method today, and a search for \"AI Music\" on YouTube or Google will mostly return compositions of this type.");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ",
-                "Aiva Technologies, a Luxembourgian company founded in 2016, has created a program that makes this method easily accessible.");
+                "Aiva Technologies, a Luxembourgian company founded in 2016, has created a program that makes this method easily accessible. (10)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ",
                 "AIVA (Artificial Intelligence Virtual Artist), the company's AI composer, uses machine learning methodology, including deep learning ",
-                "(using neural networks) and reinforcement learning (using probability) to create compositions.");
+                "(using neural networks) and reinforcement learning (using probability) to create compositions. (11)");
             break;
         case 11:
             text_Y_val = fillSlide("Modern Methods: Computer Composition",
@@ -233,15 +233,15 @@ function setSlide() {
             text_Y_val = fillSlide(" ", " ", "This is still a popular method today, and a search for \"AI Music\" on YouTube or Google will mostly return compositions of this type.");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ",
-                "Aiva Technologies, a Luxembourgian company founded in 2016, has created a program that makes this method easily accessible.");
+                "Aiva Technologies, a Luxembourgian company founded in 2016, has created a program that makes this method easily accessible. (10)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ",
                 "AIVA (Artificial Intelligence Virtual Artist), the company's AI composer, uses machine learning methodology, including deep learning ",
-                "(using neural networks) and reinforcement learning (using probability) to create compositions.");
+                "(using neural networks) and reinforcement learning (using probability) to create compositions. (11)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ", " ", " ",
                 "One of AIVA's creators, Pierre Barreau, believes that personalized music has potential as a new frontier. ",
-                "He aims to use AIVA to create pieces, in the style of great composers like Beethoven and Mozart, which are tailored to individuals' tastes.");
+                "He aims to use AIVA to create pieces, in the style of great composers like Beethoven and Mozart, which are tailored to individuals' tastes. (11)");
             break;
         case 12:
             text_Y_val = fillSlide("Modern Methods: Computer Composition",
@@ -268,7 +268,7 @@ function setSlide() {
             text_Y_val = fillSlide(" ", " ", " ", " ",
                 "This site uses a neural network to generate lyrics fitting a user\'s");
             text_Y_val += 30;
-            text_Y_val = fillSlide(" ", " ", " ", " ", " ", "selected topic and style.(*cite)");
+            text_Y_val = fillSlide(" ", " ", " ", " ", " ", "selected topic and style. (12)");
             newBulletPoint(text_Y_val);
             text_Y_val = fillSlide(" ", " ", " ", " ", " ", " ", "Below is the input used to generate these lyrics:");
             drawImageOnSlide("lyrics1", 110, 260, 0.4);
@@ -297,7 +297,7 @@ function setSlide() {
             ctx.fillText("\"We provide 12 seconds of audio to condition on and Jukebox completes the rest in a specified style.\"", offsetVal, text_Y_val);
             offsetVal += ctx.measureText("\"We provide 12 seconds of audio to condition on and Jukebox completes the rest in a specified style.\"").width;
             ctx.font = "20px Georgia";
-            ctx.fillText("(cite)", offsetVal, text_Y_val);
+            ctx.fillText("()", offsetVal, text_Y_val);
             newBulletPoint(text_Y_val);
             fillSlide(" ", " ", " ",
                 "The AI has access to the full lyrics, as well as the genre and artist, as it attempts to continue the song.",
@@ -603,8 +603,12 @@ let sn8 = "(8) \"Ray Kurzweil on \"I've Got a Secret\"\". YouTube, uploaded by S
 let sl8 = "https://www.youtube.com/watch?v=X4Neivqp2K4&feature=emb_title";
 let sn9 = "(9) Taylor, C. (2012, December 14). Ray Kurzweil Joins Google In Full-Time Engineering Director Role; Will Focus On Machine Learning, Language Processing. Retrieved July 30, 2020.";
 let sl9 = "https://techcrunch.com/2012/12/14/ray-kurzweil-joins-google-as-engineering-director-focusing-on-machine-learning-and-language-tech/?guccounter=1";
-let sn10 = "(10) ";
-let sl10 = "";
+let sn10 = "(10) Machuron, C. (2019, April 08). AIVA: The Artificial Intelligence Composing Classical Music. Retrieved July 30, 2020.";
+let sl10 = "https://www.siliconluxembourg.lu/aiva-the-artificial-intelligence-composing-classical-music/";
+let sn11 = "(11) About AIVA. Aiva Technologies. Retrieved July 30, 2020.";
+let sl11 = "https://www.aiva.ai/about";
+let sn12 = "Artificial Intelligence Songwriter – These Lyrics Do Not Exist. Retrieved July 30, 2020.";
+let sl12 = "https://theselyricsdonotexist.com";
 
 //sources to add
 //these lyrics do not exist
@@ -612,6 +616,9 @@ let sl10 = "";
 
 //change text for slide source under canvas
 function setSlideSource(){
+    document.getElementById("sourcelink1").firstChild.nodeValue = "";
+    document.getElementById("sourcelink2").firstChild.nodeValue = "";
+    document.getElementById("sourcelink3").firstChild.nodeValue = "";
     switch(currentSlide){
         case 1:
         case 2:
@@ -641,6 +648,17 @@ function setSlideSource(){
             document.getElementById("sourcelink1").setAttribute("href", sl8);
             document.getElementById("sourcelink2").firstChild.nodeValue = sn9;
             document.getElementById("sourcelink2").setAttribute("href", sl9);
+            break;
+        case 10:
+        case 11:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn10;
+            document.getElementById("sourcelink1").setAttribute("href", sl10);
+            document.getElementById("sourcelink2").firstChild.nodeValue = sn11;
+            document.getElementById("sourcelink2").setAttribute("href", sl11);
+        case 13:
+            document.getElementById("sourcelink1").firstChild.nodeValue = sn12;
+            document.getElementById("sourcelink1").setAttribute("href", sl12);
+            break;
         default:
             document.getElementById("sourcelink1").firstChild.nodeValue = "";
             document.getElementById("sourcelink2").firstChild.nodeValue = "";
